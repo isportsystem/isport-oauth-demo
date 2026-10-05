@@ -96,7 +96,6 @@ pre {background: #f4f6f8; padding: 12px; overflow: auto; max-height: 320px; font
 <?php if ($message): ?><p class="error"><?php echo h($message); ?></p><?php endif; ?>
 <?php if (!$auth): ?>
 <p><a class="button" href="?action=login">Sign in with iSport</a></p>
-<p class="muted">Test account: test-app-customer@example.invalid / TestPass123!</p>
 <?php else: ?>
 <p><a class="button" href="?action=website">Open bookings on the website</a><a href="?action=logout">Sign out</a></p>
 <?php foreach (array('me.php', 'my-bookings.php', 'my-credits.php') as $endpoint): $response = call('GET', $base . '/api/v1/' . $endpoint, null, $auth); ?>
